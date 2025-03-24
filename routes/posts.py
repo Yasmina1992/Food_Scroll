@@ -4,7 +4,7 @@ from schema.schemas import serialize_list
 from bson import ObjectId
 from config.database import users_collection, posts_collection
 
-router = APIRouter()
+router = APIRouter(prefix="/posts", tags=["Posts"])
 
 #need a get_posts method too, to get all posts
 @router.get("/")

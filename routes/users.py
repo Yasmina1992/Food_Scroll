@@ -9,7 +9,7 @@ so that the user routes are in one file and the post routes are in another file,
 to keep the code organized and avoid confusion'''
 
 
-router = APIRouter()
+router = APIRouter(prefix="/users", tags=["Users"])
 # GET Request Method
 @router.get("/")
 async def get_users():
